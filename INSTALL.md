@@ -332,18 +332,22 @@ Windows compilation
 
 Mac OSX compilation
 -------------------
+Prime the configuration:
 ```bash
 git clone --recursive https://github.com/alicevision/AliceVision.git
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -G "Xcode" ../AliceVision
 ```
-If you want enable unit tests and examples to the build:
+Or, if you want enable unit tests and examples to the build, use this instead:
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release \
       -DALICEVISION_BUILD_TESTS=ON \
       -DALICEVISION_BUILD_EXAMPLES=ON \
       -G "Xcode" \
       ../AliceVision
+```
+Finally, run the compile:
+```bash
 xcodebuild -configuration Release
 ```
 --------------------
